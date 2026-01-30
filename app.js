@@ -143,7 +143,7 @@ function render(filterText=""){
 
 async function init(){
   loadState();
-  const res = await fetch("malla.json");
+  const res = await fetch("malla.json?v=2");
   data = await res.json();
 
   const buscador = document.getElementById("buscador");
@@ -160,3 +160,4 @@ async function init(){
 }
 
 init();
+
