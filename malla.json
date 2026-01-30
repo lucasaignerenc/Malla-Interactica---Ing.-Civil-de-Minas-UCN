@@ -22,7 +22,7 @@
 
     { "id": "CALCULO_III", "nombre": "Cálculo III", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["CALCULO_II"] },
     { "id": "EC_DIF", "nombre": "Ecuaciones Diferenciales", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["CALCULO_II", "MECANICA"] },
-    { "id": "PROGRAMACION", "nombre": "Programación", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["QUIMICA_GENERAL"] },
+    { "id": "PROGRAMACION", "nombre": "Programación", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["ALGEBRA_I", "PROY_INTRO_ING"] },
     { "id": "MAT_EST", "nombre": "Materiales y Estática", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["MECANICA", "ALGEBRA_II"] },
 
     { "id": "DIALOGO_FE_CIEN", "nombre": "Diálogo, Fe–Ciencia", "semestre": 3, "creditos": 2, "categoria": "general", "prerrequisitos": ["DIALOGO_FE_CULT"] },
@@ -99,4 +99,5 @@
     }
   ]
 }
+
 
