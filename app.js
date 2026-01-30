@@ -135,7 +135,10 @@ function render(filterText=""){
       `;
 
 
-      div.addEventListener("click", () => {
+      div.addEventListener("click", (e) => {
+        // Si el click fue en el bloque de prerrequisitos, NO marcar el ramo
+        if (e.target.closest("details.prereq")) return;
+      
         if(locked) return;
         toggleDone(curso.id);
         render(document.getElementById("buscador").value);
@@ -167,5 +170,6 @@ async function init(){
 }
 
 init();
+
 
 
