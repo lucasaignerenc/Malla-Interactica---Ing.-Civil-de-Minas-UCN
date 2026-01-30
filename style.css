@@ -24,7 +24,7 @@ body{
 .top{
   padding:18px 16px 10px;
   border-bottom:1px solid var(--stroke);
-  background: rgba(0,0,0,.18);
+  background: rgba(255,255,255,.85);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -141,5 +141,6 @@ button:hover{ background: rgba(255,255,255,.12); }
 @media (min-width: 1200px){
   .grid{ grid-template-columns: repeat(6, 1fr); }
 }
+
 
 
