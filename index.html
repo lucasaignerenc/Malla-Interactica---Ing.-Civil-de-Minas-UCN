@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva - Ing. Civil de Minas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1 id="titulo">Malla Interactiva</h1>
+
+    <div class="toolbar">
+      <input id="buscador" type="search" placeholder="Buscar ramo (código o nombre)..." />
+      <button id="reset">Reiniciar progreso</button>
+    </div>
+
+    <div class="legend">
+      <span class="pill pendiente">Pendiente</span>
+      <span class="pill cursando">Cursando</span>
+      <span class="pill aprobado">Aprobado</span>
+      <span class="pill bloqueado">Bloqueado</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <small>
+      Proyecto estudiantil. Para uso informativo. Se recomienda validar siempre con la malla oficial/secretaría académica.
+    </small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
