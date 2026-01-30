@@ -1,5 +1,5 @@
 {
-  "carrera": "Ingeniería Civil de Minas (UCN) — Malla 2023 (interactiva)",
+  "carrera": "Ingeniería Civil de Minas (UCN) — 2026",
   "fuente": "Malla_ICMinas_2023 actualizada (PDF)",
   "cursos": [
     { "id": "CALCULO_I", "nombre": "Cálculo I", "semestre": 1, "creditos": 6, "categoria": "core", "prerrequisitos": [] },
@@ -99,3 +99,4 @@
     }
   ]
 }
+
