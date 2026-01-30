@@ -78,7 +78,16 @@ function groupBySemester(cursos){
   }
   return [...map.entries()].sort((a,b)=>a[0]-b[0]);
 }
+function chipsHTML(reqs){
+  if(!reqs.length) return `<div>Sin prerrequisitos.</div>`;
 
+  const chips = reqs.map(r => {
+    const name = idToName.get(r) || r; // si no encuentra nombre, muestra el ID
+    return `<span class="chip" title="${r}">${name}</span>`;
+  }).join("");
+
+  return `<div class="chips">${chips}</div>`;
+}
 function render(filterText=""){
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
@@ -116,6 +125,7 @@ function render(filterText=""){
       ].join(" ").trim();
 
       const reqs = (curso.prerrequisitos || []);
+      const prereqHtml = chipsHTML(reqs);
       const reqText = reqs.length ? reqs.join(", ") : "Sin prerrequisitos";
       
       div.innerHTML = `
@@ -128,7 +138,7 @@ function render(filterText=""){
       
         <details class="prereq" ${reqs.length ? "" : "data-empty='1'"}>
           <summary>Prerrequisitos</summary>
-          <div class="bubble">${reqText}</div>
+          <div class="bubble">${prereqHtml}</div>
         </details>
       
         ${locked ? `<div class="locked-msg"><b>Bloqueado</b>: faltan prerrequisitos.</div>` : ""}
@@ -153,8 +163,11 @@ function render(filterText=""){
 
 async function init(){
   loadState();
-  const res = await fetch("malla.json?v=2");
+  const res = await fetch("malla.json?v=6");
   data = await res.json();
+  
+  // Mapa para convertir ID -> Nombre
+  idToName = new Map(data.cursos.map(c => [c.id, c.nombre]));
 
   const buscador = document.getElementById("buscador");
   buscador.addEventListener("input", () => render(buscador.value));
@@ -170,6 +183,7 @@ async function init(){
 }
 
 init();
+
 
 
 
