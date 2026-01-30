@@ -116,17 +116,24 @@ function render(filterText=""){
       ].join(" ").trim();
 
       const reqs = (curso.prerrequisitos || []);
-      const reqText = reqs.length ? reqs.join(", ") : "—";
-
+      const reqText = reqs.length ? reqs.join(", ") : "Sin prerrequisitos";
+      
       div.innerHTML = `
         <div class="name">${curso.nombre}</div>
+      
         <div class="meta">
           <div><b>ID:</b> ${curso.id}</div>
           <div><b>Créditos:</b> ${curso.creditos ?? "-"}</div>
-          <div><b>Prerrequisitos:</b> ${reqText}</div>
-          ${locked ? `<div style="margin-top:6px; opacity:.85"><b>Bloqueado</b>: falta aprobar prerrequisitos.</div>` : ""}
         </div>
+      
+        <details class="prereq" ${reqs.length ? "" : "data-empty='1'"}>
+          <summary>Prerrequisitos</summary>
+          <div class="bubble">${reqText}</div>
+        </details>
+      
+        ${locked ? `<div class="locked-msg"><b>Bloqueado</b>: faltan prerrequisitos.</div>` : ""}
       `;
+
 
       div.addEventListener("click", () => {
         if(locked) return;
@@ -160,4 +167,5 @@ async function init(){
 }
 
 init();
+
 
