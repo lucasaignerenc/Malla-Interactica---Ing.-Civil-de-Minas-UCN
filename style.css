@@ -1,17 +1,16 @@
 :root{
-  --bg:#0b1020;
-  --text:#e8ecff;
-  --muted:#b9c3ff;
-  --stroke:rgba(255,255,255,.12);
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#4b5563;
+  --stroke:rgba(17,24,39,.12);
 
-  /* Colores por tipo */
-  --core: rgba(120,170,255,.18);
-  --general: rgba(130,255,180,.16);
-  --proyecto: rgba(255,190,120,.18);
-  --electivo: rgba(210,160,255,.18);
-  --capstone: rgba(255,120,140,.18);
+  --core: rgba(59,130,246,.12);
+  --general: rgba(16,185,129,.12);
+  --proyecto: rgba(245,158,11,.14);
+  --electivo: rgba(168,85,247,.12);
+  --capstone: rgba(239,68,68,.12);
 
-  --glow: rgba(255, 235, 140, .75);
+  --glow: rgba(245, 158, 11, .75);
 }
 
 *{ box-sizing:border-box; }
@@ -142,4 +141,5 @@ button:hover{ background: rgba(255,255,255,.12); }
 @media (min-width: 1200px){
   .grid{ grid-template-columns: repeat(6, 1fr); }
 }
+
 
