@@ -108,12 +108,18 @@ button:hover{ background: rgba(255,255,255,.12); }
 }
 .course:hover{ transform: translateY(-1px); }
 
-.course.core{ background: var(--core); }
-.course.general{ background: var(--general); }
-.course.proyecto{ background: var(--proyecto); }
-.course.electivo{ background: var(--electivo); }
-.course.capstone{ background: var(--capstone); }
+.course.core{ background: #DCEBFF; }
+.course.general{ background: #DFF7EA; }
+.course.proyecto{ background: #FFE9D6; }
+.course.electivo{ background: #F0E2FF; }
+.course.capstone{ background: #FFD9DE; }
 
+.course{
+  border: 1px solid rgba(17,24,39,.15);
+}
+.course .name, .course .meta, .course summary, .course .bubble, .course .locked-msg{
+  color: #111827;
+}
 .course .name{ font-size:13px; font-weight:650; }
 .course .meta{ font-size:12px; opacity:.9; margin-top:6px; }
 
@@ -141,6 +147,65 @@ button:hover{ background: rgba(255,255,255,.12); }
 @media (min-width: 1200px){
   .grid{ grid-template-columns: repeat(6, 1fr); }
 }
+.prereq{
+  margin-top: 8px;
+}
+
+.prereq > summary{
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(17,24,39,.15);
+  background: rgba(255,255,255,.75);
+  display: inline-block;
+}
+
+.prereq > summary::-webkit-details-marker{ display:none; }
+
+.prereq .bubble{
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(17,24,39,.12);
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 1.35;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  position: relative;
+}
+
+/* “Piquito” de la nube */
+.prereq .bubble::before{
+  content:"";
+  position:absolute;
+  top:-6px;
+  left:16px;
+  width:10px;
+  height:10px;
+  background:#ffffff;
+  border-left: 1px solid rgba(17,24,39,.12);
+  border-top: 1px solid rgba(17,24,39,.12);
+  transform: rotate(45deg);
+}
+
+/* Si no hay prerrequisitos, igual muestra algo corto */
+.prereq[data-empty="1"] .bubble{
+  opacity: .9;
+}
+
+.locked-msg{
+  margin-top: 8px;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px dashed rgba(17,24,39,.25);
+  background: rgba(255,255,255,.6);
+}
+
 
 
 
