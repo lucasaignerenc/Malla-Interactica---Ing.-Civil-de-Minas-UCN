@@ -207,6 +207,19 @@ button:hover{ background: rgba(255,255,255,.12); }
   border: 1px dashed rgba(17,24,39,.25);
   background: rgba(255,255,255,.6);
 }
+.chips{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.chip{
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:999px;
+  border:1px solid rgba(17,24,39,.12);
+  background:#f9fafb;
+}
+
 
 
 
