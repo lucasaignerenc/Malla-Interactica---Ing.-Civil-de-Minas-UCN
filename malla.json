@@ -1,0 +1,101 @@
+{
+  "carrera": "Ingeniería Civil de Minas (UCN) — Malla 2023 (interactiva)",
+  "fuente": "Malla_ICMinas_2023 actualizada (PDF)",
+  "cursos": [
+    { "id": "CALCULO_I", "nombre": "Cálculo I", "semestre": 1, "creditos": 6, "categoria": "core", "prerrequisitos": [] },
+    { "id": "INTRO_FISICA", "nombre": "Introducción a la Física", "semestre": 1, "creditos": 6, "categoria": "core", "prerrequisitos": [] },
+    { "id": "ALGEBRA_I", "nombre": "Álgebra I", "semestre": 1, "creditos": 6, "categoria": "core", "prerrequisitos": [] },
+
+    { "id": "FG_IDENTIDAD", "nombre": "Identidad, Universidad, Equidad y Género", "semestre": 1, "creditos": 1, "categoria": "general", "prerrequisitos": [] },
+    { "id": "INGLES_I", "nombre": "Inglés I", "semestre": 1, "creditos": 4, "categoria": "general", "prerrequisitos": [] },
+    { "id": "COM_EFECTIVA_I", "nombre": "Comunicación Efectiva I", "semestre": 1, "creditos": 2, "categoria": "general", "prerrequisitos": [] },
+
+    { "id": "PROY_INTRO_ING", "nombre": "Proyecto: Introducción a la Ingeniería", "semestre": 1, "creditos": 5, "categoria": "proyecto", "prerrequisitos": [] },
+
+    { "id": "CALCULO_II", "nombre": "Cálculo II", "semestre": 2, "creditos": 6, "categoria": "core", "prerrequisitos": ["CALCULO_I"] },
+    { "id": "MECANICA", "nombre": "Mecánica", "semestre": 2, "creditos": 6, "categoria": "core", "prerrequisitos": ["CALCULO_I", "INTRO_FISICA"] },
+    { "id": "QUIMICA_GENERAL", "nombre": "Química General", "semestre": 2, "creditos": 6, "categoria": "core", "prerrequisitos": [] },
+    { "id": "ALGEBRA_II", "nombre": "Álgebra II", "semestre": 2, "creditos": 6, "categoria": "core", "prerrequisitos": ["ALGEBRA_I"] },
+
+    { "id": "DIALOGO_FE_CULT", "nombre": "Diálogo, Fe–Cultura", "semestre": 2, "creditos": 2, "categoria": "general", "prerrequisitos": [] },
+    { "id": "INGLES_II", "nombre": "Inglés II", "semestre": 2, "creditos": 4, "categoria": "general", "prerrequisitos": ["INGLES_I"] },
+
+    { "id": "CALCULO_III", "nombre": "Cálculo III", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["CALCULO_II"] },
+    { "id": "EC_DIF", "nombre": "Ecuaciones Diferenciales", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["CALCULO_II", "MECANICA"] },
+    { "id": "PROGRAMACION", "nombre": "Programación", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["QUIMICA_GENERAL"] },
+    { "id": "MAT_EST", "nombre": "Materiales y Estática", "semestre": 3, "creditos": 5, "categoria": "core", "prerrequisitos": ["MECANICA", "ALGEBRA_II"] },
+
+    { "id": "DIALOGO_FE_CIEN", "nombre": "Diálogo, Fe–Ciencia", "semestre": 3, "creditos": 2, "categoria": "general", "prerrequisitos": ["DIALOGO_FE_CULT"] },
+    { "id": "FG_ELECTIVA", "nombre": "Formación General Electiva", "semestre": 3, "creditos": 2, "categoria": "general", "prerrequisitos": [] },
+
+    { "id": "PROY_DIS_INNOV", "nombre": "Proyecto: Diseño e Innovación", "semestre": 3, "creditos": 6, "categoria": "proyecto", "prerrequisitos": ["PROY_INTRO_ING"] },
+
+    { "id": "ELECTROMAG", "nombre": "Electromagnetismo", "semestre": 4, "creditos": 6, "categoria": "core", "prerrequisitos": ["CALCULO_III"] },
+    { "id": "ESTADISTICA", "nombre": "Estadística", "semestre": 4, "creditos": 6, "categoria": "core", "prerrequisitos": ["EC_DIF"] },
+    { "id": "TERMODINAMICA", "nombre": "Termodinámica", "semestre": 4, "creditos": 5, "categoria": "core", "prerrequisitos": ["PROGRAMACION"] },
+    { "id": "GEO_GEN_EST", "nombre": "Geología General y Estructural", "semestre": 4, "creditos": 5, "categoria": "core", "prerrequisitos": ["MAT_EST"] },
+
+    { "id": "ETICA_MORAL", "nombre": "Ética Moral y Profesional", "semestre": 4, "creditos": 2, "categoria": "general", "prerrequisitos": ["DIALOGO_FE_CIEN"] },
+
+    { "id": "PROY_INTRO_MIN", "nombre": "Proyecto: Introducción a la Minería", "semestre": 4, "creditos": 6, "categoria": "proyecto", "prerrequisitos": ["PROY_DIS_INNOV"] },
+
+    { "id": "ING_ECON", "nombre": "Ingeniería Económica", "semestre": 5, "creditos": 5, "categoria": "core", "prerrequisitos": ["ELECTROMAG"] },
+    { "id": "ING_DES_SUST", "nombre": "Ingeniería y Desarrollo Sustentable", "semestre": 5, "creditos": 5, "categoria": "core", "prerrequisitos": ["ESTADISTICA"] },
+    { "id": "CARGUIO_TRANS", "nombre": "Carguío y Transporte", "semestre": 5, "creditos": 5, "categoria": "core", "prerrequisitos": ["TERMODINAMICA"] },
+    { "id": "GEOMENSURA", "nombre": "Geomensura", "semestre": 5, "creditos": 5, "categoria": "core", "prerrequisitos": ["GEO_GEN_EST"] },
+    { "id": "GEO_ECON_MIN", "nombre": "Geología Económica Minera", "semestre": 5, "creditos": 5, "categoria": "core", "prerrequisitos": ["GEO_GEN_EST"] },
+    { "id": "MODEL_GEOEST", "nombre": "Modelamiento Geoestadístico", "semestre": 5, "creditos": 5, "categoria": "core", "prerrequisitos": ["ESTADISTICA"] },
+
+    { "id": "COMP_APL_MIN", "nombre": "Computación Aplicada a la Minería", "semestre": 6, "creditos": 5, "categoria": "core", "prerrequisitos": ["ING_ECON"] },
+    { "id": "GEOMEC_I", "nombre": "Geomecánica I", "semestre": 6, "creditos": 5, "categoria": "core", "prerrequisitos": ["ING_DES_SUST"] },
+    { "id": "MIN_CIELO_AB", "nombre": "Minería a Cielo Abierto", "semestre": 6, "creditos": 5, "categoria": "core", "prerrequisitos": ["CARGUIO_TRANS"] },
+    { "id": "PERF_TRON", "nombre": "Perforación y Tronadura", "semestre": 6, "creditos": 5, "categoria": "core", "prerrequisitos": ["GEOMENSURA"] },
+
+    { "id": "ELEC_MINOR_1", "nombre": "Electivo Profesional (Ruta Minors) I", "semestre": 6, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["MODEL_GEOEST"] },
+    { "id": "PROY_EVAL_YAC", "nombre": "Proyecto: Evaluación de Yacimientos", "semestre": 6, "creditos": 5, "categoria": "proyecto", "prerrequisitos": ["PROY_INTRO_MIN", "MODEL_GEOEST"] },
+
+    { "id": "PLAN_MIN", "nombre": "Planificación Minera", "semestre": 7, "creditos": 5, "categoria": "core", "prerrequisitos": ["COMP_APL_MIN"] },
+    { "id": "GEOMEC_II", "nombre": "Geomecánica II", "semestre": 7, "creditos": 5, "categoria": "core", "prerrequisitos": ["GEOMEC_I"] },
+    { "id": "MIN_SUB", "nombre": "Minería Subterránea", "semestre": 7, "creditos": 5, "categoria": "core", "prerrequisitos": ["MIN_CIELO_AB", "GEOMEC_I"] },
+    { "id": "PROC_MET", "nombre": "Procesos Metalúrgicos", "semestre": 7, "creditos": 5, "categoria": "core", "prerrequisitos": ["PERF_TRON"] },
+
+    { "id": "ELEC_MINOR_2", "nombre": "Electivo Profesional (Ruta Minors) II", "semestre": 7, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["ELEC_MINOR_1"] },
+    { "id": "PROY_OP_UNIT", "nombre": "Proyecto: Operaciones Unitarias Mina", "semestre": 7, "creditos": 5, "categoria": "proyecto", "prerrequisitos": ["PROY_EVAL_YAC"] },
+
+    { "id": "GEST_OP_PROY", "nombre": "Gestión de Operaciones y Proyectos Mineros", "semestre": 8, "creditos": 5, "categoria": "core", "prerrequisitos": ["PLAN_MIN"] },
+    { "id": "LEG_SEG_MIN", "nombre": "Legislación y Seguridad Minera", "semestre": 8, "creditos": 5, "categoria": "core", "prerrequisitos": ["GEOMEC_II"] },
+    { "id": "VENT_MIN", "nombre": "Ventilación de Minas", "semestre": 8, "creditos": 5, "categoria": "core", "prerrequisitos": ["MIN_SUB"] },
+    { "id": "EMPREND", "nombre": "Emprendimiento", "semestre": 8, "creditos": 3, "categoria": "core", "prerrequisitos": ["PROC_MET"] },
+
+    { "id": "ELEC_MINOR_3", "nombre": "Electivo Profesional (Ruta Minors) III", "semestre": 8, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["ELEC_MINOR_2"] },
+    { "id": "COM_EFECTIVA_II", "nombre": "Comunicación Efectiva II", "semestre": 8, "creditos": 2, "categoria": "general", "prerrequisitos": ["COM_EFECTIVA_I"] },
+
+    { "id": "PROY_MINERO", "nombre": "Proyecto Minero", "semestre": 8, "creditos": 5, "categoria": "proyecto", "prerrequisitos": ["PROY_OP_UNIT"] },
+
+    { "id": "ELEC_PROF_1", "nombre": "Electivo Profesional I", "semestre": 9, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["GEST_OP_PROY"] },
+    { "id": "ELEC_PROF_2", "nombre": "Electivo Profesional II", "semestre": 9, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["LEG_SEG_MIN"] },
+    { "id": "ELEC_PROF_3", "nombre": "Electivo Profesional III", "semestre": 9, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["VENT_MIN"] },
+    { "id": "ELEC_PROF_4", "nombre": "Electivo Profesional IV", "semestre": 9, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["EMPREND"] },
+    { "id": "ELEC_PROF_5", "nombre": "Electivo Profesional V", "semestre": 9, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["PROY_MINERO"] },
+    { "id": "ELEC_PROF_6", "nombre": "Electivo Profesional VI", "semestre": 9, "creditos": 5, "categoria": "electivo", "prerrequisitos": ["COM_EFECTIVA_II"] },
+
+    {
+      "id": "CAPSTONE",
+      "nombre": "Capstone Project",
+      "semestre": 10,
+      "creditos": 30,
+      "categoria": "capstone",
+      "prerrequisitos": [
+        "CALCULO_I","INTRO_FISICA","ALGEBRA_I","FG_IDENTIDAD","INGLES_I","COM_EFECTIVA_I","PROY_INTRO_ING",
+        "CALCULO_II","MECANICA","QUIMICA_GENERAL","ALGEBRA_II","DIALOGO_FE_CULT","INGLES_II",
+        "CALCULO_III","EC_DIF","PROGRAMACION","MAT_EST","DIALOGO_FE_CIEN","FG_ELECTIVA","PROY_DIS_INNOV",
+        "ELECTROMAG","ESTADISTICA","TERMODINAMICA","GEO_GEN_EST","ETICA_MORAL","PROY_INTRO_MIN",
+        "ING_ECON","ING_DES_SUST","CARGUIO_TRANS","GEOMENSURA","GEO_ECON_MIN","MODEL_GEOEST",
+        "COMP_APL_MIN","GEOMEC_I","MIN_CIELO_AB","PERF_TRON","ELEC_MINOR_1","PROY_EVAL_YAC",
+        "PLAN_MIN","GEOMEC_II","MIN_SUB","PROC_MET","ELEC_MINOR_2","PROY_OP_UNIT",
+        "GEST_OP_PROY","LEG_SEG_MIN","VENT_MIN","EMPREND","ELEC_MINOR_3","COM_EFECTIVA_II","PROY_MINERO",
+        "ELEC_PROF_1","ELEC_PROF_2","ELEC_PROF_3","ELEC_PROF_4","ELEC_PROF_5","ELEC_PROF_6"
+      ]
+    }
+  ]
+}

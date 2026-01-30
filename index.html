@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva - Ing. Civil de Minas (UCN)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1 id="titulo">Malla Interactiva</h1>
+
+    <div class="toolbar">
+      <input id="buscador" type="search" placeholder="Buscar ramo..." />
+      <button id="reset" title="Borra lo marcado como aprobado">Reiniciar</button>
+    </div>
+
+    <div class="legend">
+      <span class="pill core">Ramo</span>
+      <span class="pill general">Formación general</span>
+      <span class="pill proyecto">Proyectos</span>
+      <span class="pill electivo">Electivos</span>
+      <span class="pill capstone">Capstone</span>
+      <span class="pill unlocked">Se desbloqueó recién</span>
+    </div>
+
+    <p class="hint">
+      Click: marcar/desmarcar como aprobado (se tacha). Al aprobar, se resaltan los ramos que quedaron habilitados gracias a ese requisito.
+    </p>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <small>Uso informativo. Se recomienda validar con la malla oficial del DIMM/UCN.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

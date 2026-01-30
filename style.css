@@ -1,0 +1,144 @@
+:root{
+  --bg:#0b1020;
+  --text:#e8ecff;
+  --muted:#b9c3ff;
+  --stroke:rgba(255,255,255,.12);
+
+  /* Colores por tipo */
+  --core: rgba(120,170,255,.18);
+  --general: rgba(130,255,180,.16);
+  --proyecto: rgba(255,190,120,.18);
+  --electivo: rgba(210,160,255,.18);
+  --capstone: rgba(255,120,140,.18);
+
+  --glow: rgba(255, 235, 140, .75);
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #070a14);
+  color:var(--text);
+}
+
+.top{
+  padding:18px 16px 10px;
+  border-bottom:1px solid var(--stroke);
+  background: rgba(0,0,0,.18);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+h1{ margin:0 0 10px; font-size:20px; }
+
+.toolbar{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+input[type="search"]{
+  flex:1;
+  min-width:240px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--stroke);
+  background: rgba(255,255,255,.06);
+  color:var(--text);
+}
+
+button{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--stroke);
+  background: rgba(255,255,255,.08);
+  color:var(--text);
+  cursor:pointer;
+}
+button:hover{ background: rgba(255,255,255,.12); }
+
+.legend{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+.pill{
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--stroke);
+  font-size:12px;
+}
+.pill.core{ background: var(--core); }
+.pill.general{ background: var(--general); }
+.pill.proyecto{ background: var(--proyecto); }
+.pill.electivo{ background: var(--electivo); }
+.pill.capstone{ background: var(--capstone); }
+.pill.unlocked{ box-shadow: 0 0 0 2px var(--glow) inset; }
+
+.hint{
+  margin:10px 0 0;
+  font-size:12px;
+  opacity:.85;
+}
+
+.grid{
+  padding:16px;
+  display:grid;
+  gap:14px;
+}
+
+.semester{
+  border:1px solid var(--stroke);
+  background: rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:12px;
+}
+.semester h2{
+  margin:0 0 10px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.course{
+  border:1px solid var(--stroke);
+  border-radius:12px;
+  padding:10px;
+  margin-bottom:10px;
+  cursor:pointer;
+  transition: transform .08s ease, background .12s ease;
+}
+.course:hover{ transform: translateY(-1px); }
+
+.course.core{ background: var(--core); }
+.course.general{ background: var(--general); }
+.course.proyecto{ background: var(--proyecto); }
+.course.electivo{ background: var(--electivo); }
+.course.capstone{ background: var(--capstone); }
+
+.course .name{ font-size:13px; font-weight:650; }
+.course .meta{ font-size:12px; opacity:.9; margin-top:6px; }
+
+.course.locked{
+  opacity:.45;
+  filter: grayscale(.25);
+  cursor: not-allowed;
+}
+
+.course.done .name{
+  text-decoration: line-through;
+  opacity:.9;
+}
+.course.done{
+  opacity:.7;
+}
+
+.course.unlocked-now{
+  box-shadow: 0 0 0 3px var(--glow) inset, 0 0 18px rgba(255,235,140,.12);
+}
+
+@media (min-width: 900px){
+  .grid{ grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1200px){
+  .grid{ grid-template-columns: repeat(6, 1fr); }
+}
