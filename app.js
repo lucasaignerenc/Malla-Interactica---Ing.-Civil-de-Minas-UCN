@@ -78,13 +78,13 @@ function groupBySemester(cursos){
   }
   return [...map.entries()].sort((a,b)=>a[0]-b[0]);
 }
-function chipsHTML(reqs){
-  if(!reqs.length) return `<div>Sin prerrequisitos.</div>`;
-
-  const chips = reqs.map(r => {
-    const name = idToName.get(r) || r; // si no encuentra nombre, muestra el ID
-    return `<span class="chip" title="${r}">${name}</span>`;
-  }).join("");
+function chipsHTML(reqs){␊
+  if(!reqs.length) return `<div>Sin prerrequisitos.</div>`;␊
+␊
+  const chips = reqs.map(r => {␊
+    const name = idToName.get(r) || r; // si no encuentra nombre, muestra el ID␊
+    return `<span class="chip" title="${name}">${name}</span>`;
+  }).join("");␊
 
   return `<div class="chips">${chips}</div>`;
 }
@@ -132,7 +132,6 @@ function render(filterText=""){
         <div class="name">${curso.nombre}</div>
       
         <div class="meta">
-          <div><b>ID:</b> ${curso.id}</div>
           <div><b>Créditos:</b> ${curso.creditos ?? "-"}</div>
         </div>
       
@@ -183,6 +182,7 @@ async function init(){
 }
 
 init();
+
 
 
 
